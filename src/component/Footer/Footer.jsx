@@ -29,9 +29,9 @@ const footers = [
 
 function Copyright(props) {
     return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
+        <Typography variant="body2" sx={{color:'white'}} color="text.secondary" align="center" {...props}>
+        'Copyright © 
+        <Link color="inherit" href="https://mui.com/" sx={{textDecoration:'none'}}>
             Your Website
         </Link>{' '}
         {new Date().getFullYear()}
@@ -57,19 +57,20 @@ const Footer = () => {
                 <Grid container spacing={4} justifyContent="space-evenly">
                 {footers.map((footer) => (
                     <Grid item xs={6} sm={3} key={footer.title}>
-                    <Typography variant="h6"  gutterBottom>
+                    <Typography variant="h6"  gutterBottom  sx={{color: '#fff'}}>
                         {footer.title}
                     </Typography>
-                    
+                        
                         {footer.description.map((item) => (
                         
-                        <Typography key={item} variant='body-2'>
+                        <Typography key={item} variant='body-2' sx={{color: '#fff',cursor: 'pointer',display: 'block'} }>
                             {item}
                         </Typography>
                             
                 
                         
                         ))}
+                        
                     
                     </Grid>
                 ))}

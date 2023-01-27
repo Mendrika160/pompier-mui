@@ -10,10 +10,10 @@ const Competence = () => {
     const navigate = useNavigate();
     const competences = [0,1,2];
 
-    const checkPrestation = (c) => {
-        navigate(`/prestation/${c}`)
+    // const checkPrestation = (c) => {
+    //     navigate(`/prestation/${c}`)
 
-    }
+    // }
 
     return(
         <>
@@ -58,6 +58,7 @@ const Competence = () => {
                                 >
                                 <Button 
                                     variant="contained"
+                                    sx={{textTransform: 'none'}}
                                     onClick={() => navigate(`/prestation/${c}`)}
                                     
                                     >Voir prestation</Button>

@@ -1,8 +1,14 @@
-import {AppBar,Toolbar,Typography} from '@mui/material'
+import {AppBar,Toolbar,Typography,Button} from '@mui/material'
 //import MenuIcon from '@mui/icons-material/Menu';
 import {AppBarItem} from './style'
+import {useNavigate} from 'react-router-dom'
 
 const DeskAppBar = () => {
+    const navigate = useNavigate()
+
+    const goHome = () => {
+        navigate('/')
+    }
 
     return(
         <>
@@ -16,8 +22,11 @@ const DeskAppBar = () => {
 
                     <AppBarItem sx={{p:1}}>
                         
-                            <Typography variant="h6" sx={{ml:3}}>Home</Typography>
-                            <Typography variant="h6"sx={{ml:3}}>Services </Typography>
+                            {/* <Button sx={{ml:3}} variant="t" onClick={goHome}>Home</Button>
+                            <Button sx={{ml:3}} variant="t" onClick={goHome}>Service</Button>
+                            <Button sx={{ml:3}} variant="t" onClick={goHome}>Contact</Button> */}
+                            <Typography variant="h6"sx={{ml:3}} onClick={goHome}>Home</Typography>
+                            <Typography variant="h6"sx={{ml:3}} >Services </Typography>
                             <Typography variant="h6" sx={{ml:3}}>Contact</Typography>
                         
                         

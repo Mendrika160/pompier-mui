@@ -1,8 +1,8 @@
 import React from 'react'
 //import {Typography} from '@mui/material'
-// import Navbar from './Appbar/index'
-// import Banner from './Banner/Banner'
+
 import Competence from './Competence/Competence'
+import Devis from './Devis/Devis'
 //import Footer from './Footer/Footer'
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
         <>
         
         <Competence/>
+        <Devis/>
         
         </>
     )

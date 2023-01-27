@@ -1,9 +1,30 @@
 import React,{useState} from 'react'
 import {Box,Menu,AppBar,Toolbar,IconButton,Typography,MenuItem} from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
+import {useNavigate} from 'react-router-dom'
 const MobileAppBar = () => {
 
-    const pages = [ "Home","Services","Contact"]
+    const navigate = useNavigate()
+
+    const goHome = () => {
+        navigate('/')
+    }
+
+    // const pages = [ 
+    //     {
+    //         "title":"Home",
+    //         "path": "/"
+    //     },
+    //     {
+    //         "title":"Services",
+    //         "path": '/services'
+    //     },
+    //     {
+    //         "title":"Contact",
+    //         "path": "/contact"
+    //     }   
+    // ]
+    const pages = ["Home","Services","Contact"]
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -53,11 +74,17 @@ const MobileAppBar = () => {
                         display: { xs: 'block', md: 'none' },
                     }}
                     >
-                    {pages.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center">{page}</Typography>
+                    
+                        <MenuItem  onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center" onClick={goHome} >Home</Typography>
                         </MenuItem>
-                    ))}
+                        <MenuItem  onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center" >Services</Typography>
+                        </MenuItem>
+                        <MenuItem  onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center" >Contact</Typography>
+                        </MenuItem>
+                    
                     </Menu>
                 </Box>
                 </Toolbar>

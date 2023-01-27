@@ -2,7 +2,7 @@ import DeskAppBar from './DeskAppBar'
 import MobileAppBar from './MobileAppBar'
 import {useMediaQuery} from '@mui/material'
 import {useTheme} from '@mui/material/styles'
-
+import NavInfo from './NavInfo'
 
 const Navbar = () => {
 
@@ -11,6 +11,7 @@ const Navbar = () => {
     return(
         <>
         {matches ? <MobileAppBar/> :<DeskAppBar />}
+        
         </>
     )
 

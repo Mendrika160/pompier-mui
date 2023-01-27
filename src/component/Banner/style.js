@@ -8,6 +8,8 @@ export const  BannerSection = styled(Box)(({ theme }) => ({
     marginTop: '63px',
     height: '500px',
     backgroundImage: `url(${ImgBanner})`,
+    backgroundColor: theme.palette.primary.main,
+    
     backgoundSize: 'cover',
     color: '#f5f5f5'
 }));
