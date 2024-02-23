@@ -4,7 +4,7 @@ import {Call} from '@mui/icons-material'
 const CardInfo = () => {
   return (
     <>
-        <Card  sx={{ backgroundColor:'#ffcab0',opacity: '0.7',my:3,border:'no-border'}}>
+        <Card  sx={{ backgroundColor:'#ffcab0',opacity: '0.7',my:3,border:'none',position: 'relative'}}>
                             
                             <CardContent sx={{p:2,m:2}}>
                                                 

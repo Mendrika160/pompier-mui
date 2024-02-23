@@ -1,11 +1,9 @@
 import React ,{useState}from 'react'
-import ListSubheader from '@mui/material/ListSubheader';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 import Collapse from '@mui/material/Collapse';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 
@@ -23,7 +21,7 @@ const OneQuestion = () => {
     return (
         <>  
              <List
-                sx={{ width: '100%', bgcolor: '#f4f7f7' }}
+                sx={{ width: '100%', bgcolor: '#f4f7f7' ,position:'relative', zIndex:'1'}}
                 component="nav"
                 aria-labelledby="nested-list-subheader"
                 

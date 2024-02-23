@@ -1,6 +1,6 @@
 import React from 'react'
-import {Typography,Grid, Card,CardContent,Button, CardMedia,CardActions,Container} from '@mui/material'
-import {PrestationContainer,PrestationDetails,DevisList} from './style'
+import {Typography,CardMedia,Container} from '@mui/material'
+import {PrestationDetails} from './style'
 import { useParams } from 'react-router-dom'
 import Img from '../../assets/img/banners-homepage.png'
 import CardInfo from './CardInfo'

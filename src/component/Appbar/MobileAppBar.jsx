@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import {Box,Menu,AppBar,Toolbar,IconButton,Typography,MenuItem} from '@mui/material'
+import {Box,Menu,IconButton,Typography,MenuItem} from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import {useNavigate} from 'react-router-dom'
+import { MobileNavContainer } from './style';
 const MobileAppBar = () => {
 
     const navigate = useNavigate()
@@ -10,21 +11,6 @@ const MobileAppBar = () => {
         navigate('/')
     }
 
-    // const pages = [ 
-    //     {
-    //         "title":"Home",
-    //         "path": "/"
-    //     },
-    //     {
-    //         "title":"Services",
-    //         "path": '/services'
-    //     },
-    //     {
-    //         "title":"Contact",
-    //         "path": "/contact"
-    //     }   
-    // ]
-    const pages = ["Home","Services","Contact"]
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -35,9 +21,8 @@ const MobileAppBar = () => {
         setAnchorElNav(null);
     };
     return(
-        <>
-            <AppBar position="fixed">
-                <Toolbar variant="dense">
+            <MobileNavContainer position="relative">
+                
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
 
                     {/* Menu triple bar */}
@@ -48,10 +33,11 @@ const MobileAppBar = () => {
                         aria-haspopup="true"
                         onClick={handleOpenNavMenu}
                         color="inherit"
+                        sx={{ color:'#fff' }}
                     >
                     <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" color="inherit" component="div" sx={{my:2,display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <Typography variant="h6" color="inherit" component="div" sx={{my:2,display:'flex',alignItems:'center',justifyContent:'center', color:'#fff'}}>
                     Photos
                     </Typography>
 
@@ -86,11 +72,10 @@ const MobileAppBar = () => {
                         </MenuItem>
                     
                     </Menu>
-                </Box>
-                </Toolbar>
-            </AppBar>
+                    </Box>
+            </MobileNavContainer>
         
-        </>
+        
     )
 
 }

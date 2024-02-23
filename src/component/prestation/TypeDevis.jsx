@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,CardContent,Typography,Grid} from '@mui/material'
+import {Card,Typography,Grid} from '@mui/material'
 import {DevisCard,PriceDevis} from './style'
 
 const TypeDevis = ({title,price}) => {

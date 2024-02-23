@@ -1,9 +1,9 @@
 import React from 'react'
-import {CardCompetence,CardActionContent} from './style'
-import {Container,Card,Typography,CardContent,CardActionArea,CardMedia,Grid,Button,CardActions} from '@mui/material'
+import {CardCompetence} from './style'
+import {Container,Card,Typography,CardContent,CardMedia,Grid,Button,CardActions} from '@mui/material'
 import ImgCard from '../../assets/img/banners-homepage.png'
 
-import {Link, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 
 const Competence = () => {
@@ -29,10 +29,10 @@ const Competence = () => {
                     }}>Nos differents domaines d'intervention</Typography>
         <CardCompetence>
             <Container maxWidth="md">
-                <Grid container spacing={5}>
+                <Grid container spacing={3}>
 
                 {competences.map(c => (
-                        <Grid key={c} item xs={12} sm={6} md={4} >
+                        <Grid key={c} item xs={6} sm={6} md={4} >
                         <Card  sx={{ maxWidth: 345 }}>
                             
                                 <CardMedia
@@ -57,7 +57,7 @@ const Competence = () => {
                                     sx={{display:'flex',alignItems:'center',justifyContent:'center'}}
                                 >
                                 <Button 
-                                    variant="contained"
+                                    variant="text"
                                     sx={{textTransform: 'none'}}
                                     onClick={() => navigate(`/prestation/${c}`)}
                                     
